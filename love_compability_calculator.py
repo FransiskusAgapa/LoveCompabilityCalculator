@@ -18,7 +18,7 @@ def calculate_love_score(n1,n2):
     
     # score is based on the different between 'sum_n1' and 'sum_n2/
     the_score = abs(sum_n1 - sum_n2) % 101
-    # print(f"This is the score: {the_score}") # optional, you can see the value of 'the_score' here
+    the_score += 30 # love don't need to be expensive, am i right?
     return the_score 
 
 """
