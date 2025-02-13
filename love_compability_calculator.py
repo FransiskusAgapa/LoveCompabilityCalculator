@@ -79,7 +79,7 @@ def show_the_love():
     computer_love_advice = get_computer_love_advice(score)
 
     # show the 'computer_love_advice'
-    print(f"\n> This is Dr. Love speaking, based on the love score: {computer_love_advice}")
+    print(f"\n> Dr. Love speaking, based on the Love Score: {computer_love_advice}")
 
     print("\n=================================\n")
 
