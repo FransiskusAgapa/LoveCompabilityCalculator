@@ -1,8 +1,38 @@
-"""
+import random # use this to randomly get the 'love advice' 
 
-"""
-def get_computer_love_advice(score):
-    pass 
+def get_computer_love_advice(score): 
+    # High score messages (80 and above)
+    high_score_msg = [ "You two are a match made in coding heaven! Keep compiling your love!", 
+    "100% compatible! Looks like you both run on the same algorithm.", 
+    "It's love at first byte! Keep debugging your hearts, you're perfect!", 
+    "Your love is stronger than a billion lines of code!", 
+    "This is a love story written in Python... and it's flawless!" ] 
+
+    # Medium score messages (50 to 79) 
+    medium_score_msg = [ 
+        "There's some potential, but you might need some debugging. Maybe check your loops?", 
+        "Hmm, it's a solid connection, but your love could use a little refactoring.", 
+        "Your love is like a half-baked algorithm—getting there but still needs some tweaks.", 
+        "You're not quite a perfect match, but hey, relationships are about iteration, right?", 
+        "Compatibility is good, but your love life might still throw some exceptions." 
+    ] 
+    
+    # Low score messages (below 50) 
+    low_score_msg = [ 
+        "Your compatibility score is like a 404 error... try again later.", 
+        "Hmm, looks like there's a bug in your love life. Better debug!", 
+        "Your love life is in an infinite loop... time for a reboot!", 
+        "Your relationship status? ERROR 500: Love not found.", 
+        "Looks like your love life is stuck in an endless loop of 'no compatibility'." 
+    ] 
+    
+    if score >= 80: 
+        return random.choice(high_score_msg) 
+    elif score >= 50: 
+        return random.choice(medium_score_msg) 
+    else: 
+        return random.choice(low_score_msg)
+
 
 """
 'c in n1' : loop through each character 'c' in n1
@@ -18,14 +48,14 @@ def calculate_love_score(n1,n2):
     
     # score is based on the different between 'sum_n1' and 'sum_n2/
     the_score = abs(sum_n1 - sum_n2) % 101
-    the_score += 30 # love don't need to be expensive, am i right?
+    # love don't need to be expensive, am i right?
     return the_score 
 
 """
 'input(...)' : ask to input name and wait for the input
 """
 def get_name(role):
-    this_name = input(f"\n> What is Your {role} first name: ")
+    this_name = input(f"\n> What is Your{role} first name: ")
     return this_name
 
 # start the project here
@@ -34,19 +64,25 @@ def show_the_love():
     print("... where numbers tell you if it's true love,.. or just bad Wi-Fi ...")
 
     # get a person's name
-    seeker_name = get_name("")
+    seeker_name = get_name('').capitalize()
 
     # get the person's crush name
-    crush_name = get_name("Crush's")
+    crush_name = get_name(" Crush's").capitalize()
 
     # calculate score based on the names
     score = calculate_love_score(seeker_name,crush_name)
 
     # prince love 'score'
-    print(f"\n> Your love score is {score}%")
+    print(f"\n> {seeker_name}, your Love Score with {crush_name} is {score} %")
 
-    # ok let's get give love advice based on the 'score'
-    #get_computer_love_advice(score)
+    # ok let's get love advice based on the 'score'
+    computer_love_advice = get_computer_love_advice(score)
+
+    # show the 'computer_love_advice'
+    print(f"\n> This is Dr. Love speaking, based on the love score: {computer_love_advice}")
+
+
+
     print("\n=================================\n")
 
 # check if there's python program running
