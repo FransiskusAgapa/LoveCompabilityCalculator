@@ -1,4 +1,24 @@
 import random # use this to randomly get the 'love advice' 
+import os # help to clear scree/terminal on different type of terminals
+
+
+"""
+clear out the text on screen before starting new game
+"""
+def clear_screen():
+    # check for windows terminal
+    if os.name == 'nt':
+        os.system("cls")
+    # check for macOS and Linux
+    else:
+        os.system("clear")
+
+"""
+ask if the game want to be played again
+"""
+def do_it_again():
+    the_response = input("> Want to keep playing? press Y/y to keep playing, any other key to stop. :")
+    return True if the_response.lower() == 'y' else False 
 
 def get_computer_love_advice(score): 
     # High score messages (80 and above)
@@ -82,6 +102,10 @@ def show_the_love():
     print(f"\n> Dr. Love speaking: {computer_love_advice}")
 
     print("\n=================================\n")
+
+    # ask if they want to play again, 'clear_screen' and 'show_the_love' game again when input is 'Y/y'
+    play_again = do_it_again()
+    clear_screen() ;show_the_love() if play_again else clear_screen(); '\n'
 
 # check if there's python program running
 if __name__ == "__main__":
