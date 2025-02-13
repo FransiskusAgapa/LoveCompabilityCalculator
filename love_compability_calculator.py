@@ -48,7 +48,7 @@ def calculate_love_score(n1,n2):
     
     # score is based on the different between 'sum_n1' and 'sum_n2/
     the_score = abs(sum_n1 - sum_n2) % 101
-    # love don't need to be expensive, am i right?
+    the_score += 10 if the_score <= 10 else 0 # stop making love expensive, its not yours to begin with, am i right? LOL
     return the_score 
 
 """
@@ -80,8 +80,6 @@ def show_the_love():
 
     # show the 'computer_love_advice'
     print(f"\n> This is Dr. Love speaking, based on the love score: {computer_love_advice}")
-
-
 
     print("\n=================================\n")
 
