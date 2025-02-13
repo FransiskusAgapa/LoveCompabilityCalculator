@@ -1,5 +1,5 @@
 # LoveCompabilityCalculator
-Fun Funny project for computer club 😂😻
+Fun Funny project to make that person you have a crush on, laugh! 😂😻
 
 ## Preview (terminal based)
 https://github.com/user-attachments/assets/4a46515f-6f49-4e39-8c18-aa29012fa0b4
