@@ -17,12 +17,13 @@ def clear_screen():
 ask if the game want to be played again
 """
 def do_it_again():
-    the_response = input("> Want to keep playing? press Y/y to keep playing, any other key to stop. :")
+    the_response = input("> Want to keep playing? press Y/y to keep playing, any other key to stop.: ")
     return True if the_response.lower() == 'y' else False 
 
 def get_computer_love_advice(score): 
     # High score messages (80 and above)
-    high_score_msg = [ "You two are a match made in coding heaven! Keep compiling your love!", 
+    high_score_msg = [ 
+    "You two are a match made in coding heaven! Keep compiling your love!", 
     "100% compatible! Looks like you both run on the same algorithm.", 
     "It's love at first byte! Keep debugging your hearts, you're perfect!", 
     "Your love is stronger than a billion lines of code!", 
@@ -110,3 +111,8 @@ def show_the_love():
 # check if there's python program running
 if __name__ == "__main__":
     show_the_love()
+
+# How to run (visual studio code):
+#   Run by click the 'Run code' btn (it has play symbol)
+#   type this 'python <file_name>' in this case, ' python main.py '
+#   hit enter and play
